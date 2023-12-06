@@ -7,7 +7,7 @@ export type RouteMatch = string | RegExp;
 export type NextHandler = () => ValueOrPromise<any>;
 
 export type Nextable<H extends FunctionLike> = (
-  ...args: [...Parameters<H>, NextHandler]
+  ...args: [...Parameters<H>, NextHandler, ...any]
 ) => ValueOrPromise<any>;
 
 export type FindResult<H extends FunctionLike> = {
