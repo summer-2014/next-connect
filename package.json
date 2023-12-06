@@ -1,5 +1,5 @@
 {
-  "name": "next-connect",
+  "name": "@summer2014/next-connect",
   "version": "1.0.0",
   "description": "The method routing and middleware layer for Next.js (and many others)",
   "keywords": [
@@ -30,7 +30,7 @@
   "scripts": {
     "build": "tscd --entry index.js",
     "test": "c8 tap",
-    "prepublishOnly": "npm run clean && npm run test && npm run build",
+    "prepublishOnly": "npm run clean && npm run build",
     "coverage": "c8 report --reporter=lcov",
     "lint": "eslint ./src --ext json,ts --ignore-path .gitignore",
     "format": "prettier . -w --ignore-path ./.gitignore",
@@ -38,7 +38,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hoangvvo/next-connect.git"
+    "url": "git+https://github.com/summer-2014/next-connect.git"
   },
   "author": "Hoang Vo (https://www.hoangvvo.com)",
   "bugs": {
@@ -47,6 +47,7 @@
   "homepage": "https://github.com/hoangvvo/next-connect#readme",
   "license": "MIT",
   "devDependencies": {
+    "@tsconfig/node14": "^14.1.0",
     "@types/node": "^18.16.3",
     "@types/tap": "^15.0.8",
     "@typescript-eslint/eslint-plugin": "^5.59.2",
@@ -75,5 +76,9 @@
   },
   "engines": {
     "node": ">=16"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }

@@ -77,7 +77,7 @@ export class Router<H extends FunctionLike> {
     ...args: Parameters<H>
   ): Promise<unknown> {
     let i = 0;
-    const next = (...args2) => fns[++i](...args, next, ...args2);
+    const next = (...args2: any[]) => fns[++i](...args, next, ...args2);
     return fns[i](...args, next);
   }
 
